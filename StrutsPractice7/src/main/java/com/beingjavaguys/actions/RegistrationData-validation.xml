@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN" "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+<field name="firstName">
+    <field-validator type="requiredstring">
+       <message>first Name is required.</message>
+    </field-validator>
+</field>
+
+<field name="lastName">
+    <field-validator type="requiredstring">
+       <message>last Name is required.</message>
+    </field-validator>
+</field>
+
+
+<field name="email">
+    <field-validator type="requiredstring">
+    <message>email required</message>
+    </field-validator>
+
+    <field-validator type="email">
+    <message>enter valid email id</message>
+    </field-validator>
+</field>
+
+<field name="phone">
+   <field-validator type="long">
+        <param name="min">10</param>
+        <param name="max">12</param>
+        <message>Age must be ${min} - ${max}</message>
+   </field-validator>
+</field>
+
+
+</validators>
